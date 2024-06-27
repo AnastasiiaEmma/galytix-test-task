@@ -29,7 +29,7 @@ galytix_test_task/
 1. **Clone the Repository**
     ```
     git clone https://github.com/AnastasiiaEmma/galytix-test-task.git
-    cd my_python_app
+    cd galytix-test-task
     ```
 
 2.  **Create and Activate Virtual Environment**
