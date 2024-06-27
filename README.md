@@ -5,7 +5,7 @@ This application processes a set of phrases by calculating semantic distances be
 ## Directory Structure` 
 
 ```
-my_python_app/ 
+galytix_test_task/ 
 ├──  **init**.py 
 ├── .gitignore 
 ├── init_pipeline.py 
@@ -27,15 +27,21 @@ my_python_app/
 ### Step-by-Step Guide
 
 1. **Clone the Repository**
-`  gh repo clone AnastasiiaEmma/my_python_app`
-`  cd my_python_app`
+    ```
+    git clone https://github.com/AnastasiiaEmma/galytix-test-task.git
+    cd my_python_app
+    ```
 
 2.  **Create and Activate Virtual Environment**
-   `python3 -m venv venv`
-` source venv/bin/activate`
+    ```
+    python3 -m venv venv
+    source venv/bin/activate
+    ```
     
 4.  **Install Required Libraries**
-    `pip install -r requirements.txt` 
+    ```
+    pip install -r requirements.txt 
+    ```
     
 5.  **Download Pretrained Word2Vec Vectors**
     
@@ -72,12 +78,8 @@ my_python_app/
 
 ### Finding the Closest Matching Phrase
 
-The  `process_data.py`  script also includes functionality to find the closest matching phrase to a user-input phrase. You can modify the example usage at the end of the script to test this feature.
+The  `process_data.py`  script also includes functionality to find the closest matching phrase to a user-input phrase. To run the script, execute it from the terminal. When prompted `Please enter a phrase: ` , enter a phrase, and the script will display the closest matching phrase from the dataset.
 
-### Example Usage of find_closest_match
-`user_input = "risk impact"
-closest_phrase, distance = find_closest_match(user_input, phrases, wv)
-print(f"Closest phrase: {closest_phrase} with distance {distance}")` 
 
 ## Logging and Error Handling
 

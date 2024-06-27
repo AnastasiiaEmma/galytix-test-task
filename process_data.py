@@ -9,7 +9,7 @@ import logging.config
 logging.config.fileConfig('logging.conf')
 
 # Get a logger
-logger = logging.getLogger('my_python_app')
+logger = logging.getLogger('galytix_test_task')
 
 def get_phrase_embedding(phrase, wv):
     """
@@ -76,7 +76,14 @@ def find_closest_match(user_input, phrases, wv):
     logger.info(f"Closest phrase to '{user_input}' is '{closest_phrase}' with distance {distances.min()}")
     return closest_phrase, distances.min()
 
-# Example usage of find_closest_match
-user_input = "banana split"
-closest_phrase, distance = find_closest_match(user_input, phrases, wv)
-print(f"Closest phrase: {closest_phrase} with distance {distance}")
+if __name__ == "__main__":
+    # Prompt the user to input a phrase
+    user_input = input("Please enter a phrase: ")
+
+    # Find the closest matching phrase
+    closest_phrase, distance = find_closest_match(user_input, phrases, wv)
+    
+    if closest_phrase:
+        print(f"Closest phrase: {closest_phrase} with distance {distance}")
+    else:
+        print("No embedding found for the input phrase.")
